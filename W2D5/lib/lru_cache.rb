@@ -1,17 +1,31 @@
 class LRUCache
-    def initialize
+    attr_reader :store, :max_size
+
+    def initialize(max_size)
+      @store = []
+      @max_size = max_size
     end
 
     def count
-      # returns number of elements currently in cache
+      store.count
     end
 
     def add(el)
-      # adds element to cache according to LRU principle
+      if store.include?(el)
+        idx = store.find_index(el)
+        store.insert(-1, store.delete_at(idx))
+      else
+        if store.count == 4
+          store.shift
+          store.push(el)
+        else
+          store.push(el)
+        end
+      end
     end
 
     def show
-      # shows the items in the cache, with the LRU item first
+      "#{store}"
     end
 
     private
