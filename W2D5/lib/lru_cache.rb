@@ -1,6 +1,5 @@
 class LRUCache
-    attr_reader :store, :max_size
-
+  
     def initialize(max_size)
       @store = []
       @max_size = max_size
@@ -29,6 +28,8 @@ class LRUCache
     end
 
     private
+
+    attr_reader :store, :max_size
     # helper methods go here!
 
   end
