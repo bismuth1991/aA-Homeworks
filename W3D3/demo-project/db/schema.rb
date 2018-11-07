@@ -15,7 +15,7 @@ ActiveRecord::Schema.define(version: 2018_11_07_055237) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "houses_tables", force: :cascade do |t|
+  create_table "houses", force: :cascade do |t|
     t.string "address", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
