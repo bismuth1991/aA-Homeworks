@@ -74,7 +74,7 @@ def pulp_fiction_actors
   Actor
     .select(:id, :name)
     .joins(:movies)
-    .where('title = \'Pulp Fiction\'')
+    .where(:movies => {title: 'Pulp Fiction'})
 end
 
 def uma_movies
