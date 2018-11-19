@@ -1,0 +1,36 @@
+/* PHASE 3: Content */
+
+.content {
+  width: 900px;
+  margin: auto;
+  background: white;
+  border-left: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+  border-right: 1px solid #ccc;
+}
+
+.content-sidebar {
+  width: 225px;
+  float: left;
+  padding: 10px
+}
+
+.content-main {
+  width: 625px;
+  float: left;
+  padding: 10px
+}
+
+.content h1 {
+  font-size: 24px;
+  font-weight: 700;
+  padding: 10px
+
+}
+
+.content p {
+  font-size: 16px;
+  font-weight: 400;
+  padding: 10px
+
+}
