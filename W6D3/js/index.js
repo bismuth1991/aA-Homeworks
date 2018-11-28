@@ -3,7 +3,11 @@ console.log('Hello from the JavaScript console!');
 // Your AJAX request here
 function updatePage(data) {
   const $body = $('body');
-  $body.html(`<h4>Temperature: ${data.main.temp}</h4>`);
+
+  const $temp = $('<h4></h4>');
+  $temp.text(`Temperature: ${data.main.temp}`);
+
+  $body.append($temp);
 }
 
 $.ajax({
